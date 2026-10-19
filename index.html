@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10283f">
+  <title>Adventure Based Training Center - Naula | Puzzle Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">▲</div>
+    <div>
+      <p class="eyebrow">CHALLENGE • TEAMWORK • ADVENTURE</p>
+      <h1>Adventure Based Training Center - Naula</h1>
+      <p class="subtitle">Puzzle Game for School Prefect Students</p>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="intro-panel">
+      <div class="intro-copy">
+        <span class="tag">YOUR ADVENTURE STARTS HERE</span>
+        <h2>Piece it together.<br><em>Complete the challenge.</em></h2>
+        <p>Rebuild the adventure picture using all 30 pieces. Stay focused, think ahead, and keep an eye on your time!</p>
+      </div>
+      <div class="mini-stats" aria-label="Puzzle details">
+        <div><strong>30</strong><span>Pieces</span></div>
+        <div><strong>5 × 6</strong><span>Grid</span></div>
+        <div><strong>1</strong><span>Challenge</span></div>
+      </div>
+    </section>
+
+    <section class="panel details-panel" id="detailsPanel">
+      <div class="section-heading">
+        <span class="step-number">01</span>
+        <div><h2>Player details</h2><p>Enter your details before starting the game.</p></div>
+      </div>
+      <form id="playerForm">
+        <label for="playerName">Name <span>*</span></label>
+        <input id="playerName" name="playerName" type="text" placeholder="Enter player's full name" required maxlength="100">
+
+        <label for="schoolName">School <span>*</span></label>
+        <input id="schoolName" name="schoolName" type="text" placeholder="Enter school name" required maxlength="120">
+
+        <label for="teamNumber">Team number <span>*</span></label>
+        <input id="teamNumber" name="teamNumber" type="text" placeholder="Enter team number" required maxlength="30">
+
+        <p class="form-note">Please check your details before you begin. The timer starts when you press “Start Puzzle”.</p>
+        <button class="primary-btn" type="submit">Start Puzzle <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section class="panel game-panel hidden" id="gamePanel">
+      <div class="game-topline">
+        <div class="section-heading compact">
+          <span class="step-number">02</span>
+          <div><h2>Adventure puzzle</h2><p id="playerSummary">Ready for the challenge</p></div>
+        </div>
+        <div class="timer-box"><span>TIME ELAPSED</span><strong id="timer">00:00</strong></div>
+      </div>
+      <div class="game-instructions">
+        <span class="info-icon">i</span>
+        <p>Select one piece, then select another piece to swap their positions. Arrange all 30 pieces to complete the picture.</p>
+      </div>
+      <div class="puzzle-area">
+        <div id="puzzleBoard" class="puzzle-board" role="group" aria-label="30-piece picture puzzle"></div>
+      </div>
+      <div class="game-controls">
+        <p id="gameStatus" aria-live="polite">Choose two pieces to swap them.</p>
+        <button class="secondary-btn" id="restartBtn" type="button">Shuffle again</button>
+      </div>
+      <div class="reference-wrap">
+        <details>
+          <summary>View original picture</summary>
+          <img src="assets/adventure-puzzle.jpg" alt="Original adventure mountain illustration" class="reference-image">
+        </details>
+      </div>
+    </section>
+
+    <section class="panel result-panel hidden" id="resultPanel">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <span class="tag">CHALLENGE COMPLETED</span>
+      <h2>Great work, adventurer!</h2>
+      <p>You completed the puzzle. Your final time is:</p>
+      <div class="final-time" id="finalTime">00:00</div>
+      <div class="result-details" id="resultDetails"></div>
+      <div class="share-instruction">
+        <div class="share-icon" aria-hidden="true">↗</div>
+        <div>
+          <h3>Submit your result</h3>
+          <p>Take a screenshot of this completed screen and send it to <strong>0717043887</strong> on WhatsApp.</p>
+          <p class="small-note">This game does not automatically take or send screenshots. Please capture your screen and send it manually.</p>
+        </div>
+      </div>
+      <div class="result-actions">
+        <button class="primary-btn" id="whatsappBtn" type="button">Open WhatsApp <span aria-hidden="true">↗</span></button>
+        <button class="secondary-btn" id="playAgainBtn" type="button">Play again</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Adventure Based Training Center - Naula</p>
+      <span>LEARN • LEAD • EXPLORE</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
