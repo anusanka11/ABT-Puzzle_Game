@@ -17,24 +17,42 @@ body {
   background: var(--cream);
   font-family: "DM Sans", Arial, sans-serif;
 }
+
+/* ===== HEADER WITH LOGOS ===== */
 .site-header {
   background: var(--navy);
   color: white;
-  padding: 25px max(5vw, 20px);
+  padding: 22px max(5vw, 20px);
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: clamp(14px, 3vw, 32px);
   border-bottom: 4px solid var(--orange);
+  text-align: center;
 }
-.brand-mark {
-  display: grid; place-items: center; flex: 0 0 48px; height: 48px;
-  border: 1px solid #f49a3e; color: var(--orange); border-radius: 15px;
-  font-size: 25px; transform: rotate(0deg);
+.header-text {
+  flex: 1 1 auto;
+  min-width: 0;
 }
+.header-logo {
+  flex: 0 0 auto;
+  width: clamp(64px, 9vw, 96px);
+  height: clamp(64px, 9vw, 96px);
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.header-logo.logo-shield {
+  border-radius: 16px;
+}
+
 .eyebrow { font-size: 10px; letter-spacing: 2.2px; font-weight: 700; color: #ffc27f; margin: 0 0 5px; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font: 800 clamp(18px, 2.4vw, 26px)/1.25 Manrope, sans-serif; margin-bottom: 5px; }
 .subtitle { color: #d5e0e7; margin: 0; font-size: 14px; }
+
 .page-wrap { max-width: 1120px; width: calc(100% - 36px); margin: 30px auto 0; }
 .intro-panel {
   display: flex; justify-content: space-between; align-items: center; gap: 25px;
@@ -114,12 +132,37 @@ summary { cursor: pointer; color: #38556a; font-size: 12px; font-weight: 700; }
 .share-instruction p { font-size: 13px; line-height: 1.6; margin: 0 0 5px; color: #2e5542; }
 .share-instruction .small-note { color: #577565; font-size: 11px; }
 .result-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+
+/* ===== FOOTER WITH LOGOS ===== */
 footer { text-align: center; padding: 12px 0 30px; color: #667987; }
+.footer-logos { display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 14px; }
+.footer-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.footer-logo.logo-shield { border-radius: 10px; }
 footer p { font: 700 12px Manrope, sans-serif; margin: 0 0 5px; }
 footer span { font-size: 9px; letter-spacing: 2px; }
+
 @media (max-width: 760px) {
-  .site-header { align-items: flex-start; padding: 20px 18px; }
-  .brand-mark { flex-basis: 40px; height: 40px; }
+  .site-header {
+    padding: 16px 12px;
+    gap: 10px;
+    align-items: center;
+  }
+  .header-logo {
+    width: 56px;
+    height: 56px;
+    padding: 4px;
+  }
+  h1 { font-size: 15px; }
+  .eyebrow { font-size: 8px; letter-spacing: 1.2px; }
+  .subtitle { font-size: 11px; }
   .page-wrap { width: calc(100% - 24px); margin-top: 14px; }
   .intro-panel { display: block; padding: 24px 20px; }
   .mini-stats { margin-top: 22px; }
